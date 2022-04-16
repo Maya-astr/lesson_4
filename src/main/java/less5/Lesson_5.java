@@ -1,6 +1,6 @@
-package less4;
+package less5;
 
-public class Lesson_4 {
+public class Lesson_5 {
     private static final int size = 10000000;
     private static final int h = size / 2;
     private static float[] arr = new float[size];
@@ -24,7 +24,7 @@ public class Lesson_4 {
 
         long singleTime = System.currentTimeMillis() - start;
 
-        System.out.printf("single thread time: %d%n", singleTime);
+        System.out.printf("увеличение: %d%n", singleTime);
         return singleTime;
     }
 
@@ -39,7 +39,6 @@ public class Lesson_4 {
 
         MyThread t1 = new MyThread("a", a);
         MyThread t2 = new MyThread("b", b);
-
         t1.start();
         t2.start();
 
@@ -58,7 +57,7 @@ public class Lesson_4 {
 
         long multiTime = System.currentTimeMillis() - start;
 
-        System.out.printf("multi thread time: %d%n", multiTime);
+        System.out.printf("многопоточное время: %d%n", multiTime);
 
         return multiTime;
     }
@@ -67,6 +66,6 @@ public class Lesson_4 {
         double diff = ((double) singleTime / (double) multiTime) - 1;
         int increase = (int) (diff * 100);
 
-        System.out.printf("growth: %d%%%n", increase);
+        System.out.printf("рост: %d%%%n", increase);
     }
 }

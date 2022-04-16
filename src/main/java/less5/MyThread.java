@@ -1,4 +1,4 @@
-package less4;
+package less5;
 
 public class MyThread extends Thread {
     private float[] arr;
